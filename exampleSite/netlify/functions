@@ -1,0 +1,8 @@
+multi-review.js
+
+// Basic OpenAI example (full code in next steps)  
+exports.handler = async (event) => {  
+  const { code } = JSON.parse(event.body);  
+  const response = await analyzeWithOpenAI(code);  
+  return { statusCode: 200, body: JSON.stringify(response) };  
+};  
